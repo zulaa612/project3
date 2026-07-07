@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+}
+
+.appwindow{
+    width: 800px;
+    background-color: #18181D;
+    border-radius: 18px;
+    padding: 0;
+    border: 1px solid #363640;
+    display: flex;
+    flex-direction: column;
+    color: #EDECE6;
+    font-size: 13px;
+    font-weight: 400;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+}
+
+.topBar{
+    height: 50px;
+    padding: 13px 20px;
+    background-color: #22222B;
+    border-bottom: 1px solid #363640;
+    border-radius: 18px 18px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.snapboothText{
+    color: 	#EDECE6;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.download{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.downloadButton{
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #2A2A35;
+    border: 1px solid #363640;
+}
+
+.downloadText{
+    font-size: 11px;
+    font-weight: 500;
+    color: #8A8894;
+}
+
+.videoPanel{
+    aspect-ratio: 4 / 3;
+    background-color: #2A2A35;
+    border: 1px solid #363640;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 20px;
+    position: relative;
+}
+
+.liveBox{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 3px 9px;
+    background-color: rgba(10,10,15, 0.70);
+    border: 1px solid rgba(74,222,128,0.35);
+    border-radius: 6px;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.liveDot{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #4ADE80;
+}
+
+.liveText{
+    font-size: 10px;
+    font-weight: 700;
+    color: 	#4ADE80;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+.photosBox{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 3px 9px;
+    background-color: rgba(10, 10, 15, 0.70);
+    border: 1px solid #363640;
+    border-radius: 6px;
+    backdrop-filter: blur(6px);
+    font-size: 11px;
+    font-weight: 500;
+    color: 	#8A8894;
+}
+
