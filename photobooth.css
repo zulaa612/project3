@@ -1,118 +1,240 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
 
-.container{
-    width: 100vw;
-    height: 100vh;
-    background-color: beige;
-    display: flex;
-    justify-content: center;
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.appwindow{
-    width: 800px;
-    background-color: #18181D;
-    border-radius: 18px;
-    padding: 0;
-    border: 1px solid #363640;
-    display: flex;
-    flex-direction: column;
-    color: #EDECE6;
-    font-size: 13px;
-    font-weight: 400;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+.appwindow {
+  max-width: 800px;
+  width: 100%;
+  min-height: 600px;
+  background-color: #18181d;
+  border-radius: 18px;
+  padding: 0;
+  border: 1px solid #363640;
+  display: flex;
+  flex-direction: column;
+  color: #edece6;
+  font-size: 13px;
+  font-weight: 400;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
 }
 
-.topBar{
-    height: 50px;
-    padding: 13px 20px;
-    background-color: #22222B;
-    border-bottom: 1px solid #363640;
-    border-radius: 18px 18px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.topBar {
+  height: 50px;
+  padding: 13px 20px;
+  background-color: #22222b;
+  border-bottom: 1px solid #363640;
+  border-radius: 18px 18px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.snapboothText{
-    color: 	#EDECE6;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: -0.01em;
+.appBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
 }
 
-.download{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.snapboothText {
+  color: #edece6;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
-.downloadButton{
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    background-color: #2A2A35;
-    border: 1px solid #363640;
+.download {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.downloadText{
-    font-size: 11px;
-    font-weight: 500;
-    color: #8A8894;
+.downloadButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #2a2a35;
+  border: 1px solid #363640;
 }
 
-.videoPanel{
-    aspect-ratio: 4 / 3;
-    background-color: #2A2A35;
-    border: 1px solid #363640;
-    border-radius: 14px;
-    overflow: hidden;
-    margin: 20px;
-    position: relative;
+.downloadText {
+  font-size: 11px;
+  font-weight: 500;
+  color: #8a8894;
 }
 
-.liveBox{
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    padding: 3px 9px;
-    background-color: rgba(10,10,15, 0.70);
-    border: 1px solid rgba(74,222,128,0.35);
-    border-radius: 6px;
-    backdrop-filter: blur(6px);
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.videoPanel {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #2a2a35;
+  border: 1px solid #363640;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
 }
 
-.liveDot{
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #4ADE80;
+.videoPanel video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.liveText{
-    font-size: 10px;
-    font-weight: 700;
-    color: 	#4ADE80;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
+.liveBox {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 3px 9px;
+  background-color: rgba(10, 10, 15, 0.7);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.photosBox{
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    padding: 3px 9px;
-    background-color: rgba(10, 10, 15, 0.70);
-    border: 1px solid #363640;
-    border-radius: 6px;
-    backdrop-filter: blur(6px);
-    font-size: 11px;
-    font-weight: 500;
-    color: 	#8A8894;
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4ade80;
 }
 
+.liveText {
+  font-size: 10px;
+  font-weight: 700;
+  color: #4ade80;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.photosBox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 3px 9px;
+  background-color: rgba(10, 10, 15, 0.7);
+  border: 1px solid #363640;
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
+  font-size: 11px;
+  font-weight: 500;
+  color: #8a8894;
+}
+
+.snapSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.shutterButton {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #ff5c52;
+  box-shadow:
+    0 0 0 5px rgba(255, 92, 82, 0.28),
+    0 10px 28px rgba(255, 92, 82, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shutterButton:active {
+  transform: scale(0.93);
+}
+
+.innerRing {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.22);
+}
+
+.snapText {
+  font-size: 10px;
+  font-weight: 600;
+  color: #5a5966;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.thumbnailStrip {
+  width: 100%;
+  height: auto;
+  padding: 13px 20px;
+  background-color: #22222b;
+  border-top: 1px solid #363640;
+  border-radius: 0 0 18px 18px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: auto;
+  align-items: center;
+}
+
+.singleThumbnail {
+  width: 80px;
+  height: 60px;
+  background-color: #2a2a35;
+  border: 1px solid #363640;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.singleThumbnail:hover {
+  border-color: #ff5c52;
+}
+
+.singleThumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbNumber {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.singleThumbnail2 {
+  width: 80px;
+  height: 60px;
+  background-color: #2a2a35;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  border: 1px dashed #363640;
+  position: relative;
+}
+
+.singleThumbnail2:hover {
+  border-color: #5a5966;
+  cursor: pointer;
+}
