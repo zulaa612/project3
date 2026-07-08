@@ -100,30 +100,79 @@
   display: none;
 }
 
-#videoPanel .promptOverlay{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    z-index: 2;
-    display: none;
+#videoPanel .promptOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+  display: none;
 }
 
-.promptOverlay h3{
-    font-size: 12px;
-    font-weight: 500;
-    color: 	#EDECE6;
-    margin-bottom: 8px;
+.camera {
+  width: 600px;
+  height: 200px;
+  border: 2px dashed #8a8894;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.promptOverlay p{
-    width: 150px;
-    height: 20px;
-    font-size: 10px;
-    margin-bottom: 20px;
-    font-weight: 500;
-    color: 	#EDECE6;
+.innerCamera {
+  width: 80px;
+  height: 60px;
+  background-color: #2a2a35;
+  border: 3px dashed #363640;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerCameracircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px dashed #363640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerCircle2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px dashed #363640;
+  background-color: #363640;
+}
+
+.promptOverlay h3 {
+  font-size: 12px;
+  font-weight: 800;
+  color: #edece6;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.promptOverlay p {
+  width: 150px;
+  height: 20px;
+  font-size: 10px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #edece6;
+}
+
+.allowButton {
+  background-color: #ff5c52;
+  padding: 10px 20px;
+  border: none;
+  font-size: 10px;
+  border-radius: 100px;
+  font-weight: 800;
 }
 .liveBox {
   position: absolute;
@@ -168,42 +217,42 @@
   color: #8a8894;
 }
 
-.cameraButton{
-    width: 80px;
-    height: 60px;
-    background-color: #2a2a35;
-    border: 3px solid #363640;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cameraButton {
+  width: 80px;
+  height: 60px;
+  background-color: #2a2a35;
+  border: 3px solid #363640;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.circle{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 3px solid #363640;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #363640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.innerCircle{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 3px solid #363640;
-    background-color: #363640;
+.innerCircle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #363640;
+  background-color: #363640;
 }
 
-.livePreview{
-    font-size: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: 	#5A5966;
-    margin-top: 10px;
+.livePreview {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #5a5966;
+  margin-top: 10px;
 }
 
 .snapSection {
