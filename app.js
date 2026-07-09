@@ -12,3 +12,12 @@ const livePreview = document.querySelector(".;ivePreview");
 
 let mediaStream = null; 
 let photos = [];
+
+downloadArea.style.cursor = "pointer";
+
+video.style.display = "none";
+liveBox.style.display = "none";
+photosBox.style.display = "none";
+cameraButton.style.display = "flex";
+livePreview.style.display = "block";
+
