@@ -107,10 +107,9 @@
   text-align: center;
   padding: 20px;
   z-index: 2;
-  display: none;
 }
 
-.camera {
+/*.camera {
   width: 600px;
   height: 200px;
   border: 2px dashed #8a8894;
@@ -164,7 +163,7 @@
   margin-bottom: 15px;
   font-weight: 500;
   color: #edece6;
-}
+}*/
 
 .allowButton {
   background-color: #ff5c52;
@@ -174,6 +173,33 @@
   border-radius: 100px;
   font-weight: 800;
 }
+
+.allowButton:hover {
+  background: #ff5c52;
+}
+
+.allowButton:active {
+  transform: scale(0.96);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #5a5966;
+  border-top-color: #ff5c52;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .liveBox {
   position: absolute;
   top: 12px;
