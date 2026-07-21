@@ -4,43 +4,36 @@
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
 }
-
-.container {
-  width: 100vw;
+body {
+  background: beige;
   min-height: 100vh;
-  background-color: beige;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .appwindow {
   max-width: 800px;
   width: 100%;
   min-height: 600px;
-  background-color: #18181d;
+  background: #18181d;
   border-radius: 18px;
-  padding: 0;
   border: 1px solid #363640;
   display: flex;
   flex-direction: column;
   color: #edece6;
   font-size: 13px;
-  font-weight: 400;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
 }
-
 .topBar {
   height: 50px;
   padding: 13px 20px;
-  background-color: #22222b;
+  background: #22222b;
   border-bottom: 1px solid #363640;
   border-radius: 18px 18px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .appBody {
   padding: 20px;
   display: flex;
@@ -48,41 +41,36 @@
   gap: 20px;
   flex-grow: 1;
 }
-
 .snapboothText {
-  color: #edece6;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
-
 .download {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
-
 .downloadButton {
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  background-color: #2a2a35;
+  background: #2a2a35;
   border: 1px solid #363640;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .downloadText {
   font-size: 11px;
   font-weight: 500;
   color: #8a8894;
 }
-
 .videoPanel {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  background-color: #2a2a35;
+  aspect-ratio: 4/3;
+  background: #2a2a35;
   border: 1px solid #363640;
   border-radius: 14px;
   overflow: hidden;
@@ -92,135 +80,56 @@
   justify-content: center;
   align-items: center;
 }
-
 .videoPanel video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: none;
 }
-
-#videoPanel .promptOverlay {
+.promptOverlay {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 20px;
+  gap: 12px;
   z-index: 2;
 }
-
-/*.camera {
-  width: 600px;
-  height: 200px;
-  border: 2px dashed #8a8894;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.innerCamera {
-  width: 80px;
-  height: 60px;
-  background-color: #2a2a35;
-  border: 3px dashed #363640;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.innerCameracircle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 3px dashed #363640;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.innerCircle2 {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 3px dashed #363640;
-  background-color: #363640;
-}
-
-.promptOverlay h3 {
-  font-size: 12px;
-  font-weight: 800;
-  color: #edece6;
-  margin-bottom: 10px;
-  margin-top: 25px;
-}
-
-.promptOverlay p {
-  width: 150px;
-  height: 20px;
-  font-size: 10px;
-  margin-bottom: 15px;
-  font-weight: 500;
-  color: #edece6;
-}*/
-
 .allowButton {
-  background-color: #ff5c52;
+  background: #ff5c52;
   padding: 10px 20px;
   border: none;
   font-size: 10px;
   border-radius: 100px;
   font-weight: 800;
+  color: #fff;
+  cursor: pointer;
 }
-
-.allowButton:hover {
-  background: #ff5c52;
-}
-
 .allowButton:active {
   transform: scale(0.96);
 }
-
-.loader {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #5a5966;
-  border-top-color: #ff5c52;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.liveBox {
+.liveBox,
+.photosBox {
   position: absolute;
   top: 12px;
-  left: 12px;
   padding: 3px 9px;
-  background-color: rgba(10, 10, 15, 0.7);
-  border: 1px solid rgba(74, 222, 128, 0.35);
   border-radius: 6px;
   backdrop-filter: blur(6px);
-  display: flex;
+}
+.liveBox {
+  left: 12px;
+  background: rgba(10, 10, 15, 0.7);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  display: none;
   align-items: center;
   gap: 5px;
 }
-
 .liveDot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #4ade80;
+  background: #4ade80;
 }
-
 .liveText {
   font-size: 10px;
   font-weight: 700;
@@ -228,72 +137,26 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-
 .photosBox {
-  position: absolute;
-  top: 12px;
   right: 12px;
-  padding: 3px 9px;
-  background-color: rgba(10, 10, 15, 0.7);
+  background: rgba(10, 10, 15, 0.7);
   border: 1px solid #363640;
-  border-radius: 6px;
-  backdrop-filter: blur(6px);
   font-size: 11px;
   font-weight: 500;
   color: #8a8894;
 }
-
-.cameraButton {
-  width: 80px;
-  height: 60px;
-  background-color: #2a2a35;
-  border: 3px solid #363640;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 3px solid #363640;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.innerCircle {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 3px solid #363640;
-  background-color: #363640;
-}
-
-.livePreview {
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #5a5966;
-  margin-top: 10px;
-}
-
 .snapSection {
   display: flex;
   align-items: center;
-  gap: 20px;
-  flex-grow: 1;
+  gap: 10px;
   flex-direction: column;
 }
-
 .shutterButton {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background-color: #ff5c52;
+  background: #ff5c52;
+  cursor: pointer;
   box-shadow:
     0 0 0 5px rgba(255, 92, 82, 0.28),
     0 10px 28px rgba(255, 92, 82, 0.4);
@@ -301,19 +164,16 @@
   justify-content: center;
   align-items: center;
 }
-
 .shutterButton:active {
   transform: scale(0.93);
 }
-
 .innerRing {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.22);
 }
-
 .snapText {
   font-size: 10px;
   font-weight: 600;
@@ -321,44 +181,40 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
 .thumbnailStrip {
   width: 100%;
-  height: auto;
   padding: 13px 20px;
-  background-color: #22222b;
+  background: #22222b;
   border-top: 1px solid #363640;
   border-radius: 0 0 18px 18px;
   margin-top: auto;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   gap: 10px;
   overflow: auto;
   align-items: center;
 }
-
-.singleThumbnail {
+.singleThumbnail,
+.singleThumbnail2 {
   width: 80px;
   height: 60px;
-  background-color: #2a2a35;
-  border: 1px solid #363640;
+  background: #2a2a35;
   border-radius: 8px;
   overflow: hidden;
   flex-shrink: 0;
   position: relative;
 }
-
+.singleThumbnail {
+  border: 1px solid #363640;
+}
 .singleThumbnail:hover {
   border-color: #ff5c52;
+  cursor: pointer;
 }
-
 .singleThumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .thumbNumber {
   position: absolute;
   bottom: 4px;
@@ -367,19 +223,9 @@
   font-weight: 600;
   color: rgba(255, 255, 255, 0.35);
 }
-
 .singleThumbnail2 {
-  width: 80px;
-  height: 60px;
-  background-color: #2a2a35;
-  border-radius: 8px;
-  overflow: hidden;
-  flex-shrink: 0;
-  position: relative;
   border: 1px dashed #363640;
-  position: relative;
 }
-
 .singleThumbnail2:hover {
   border-color: #5a5966;
   cursor: pointer;

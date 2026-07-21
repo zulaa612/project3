@@ -5,82 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="/photobooth.css" rel="stylesheet" />
-    <script src="app.js" defer></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <script src="snap.js" defer></script>
   </head>
+
   <body>
-    <div class="container">
-      <div class="appwindow">
-        <div class="topBar">
-          <div class="snapboothText">SnapBooth</div>
-          <div class="download">
-            <div class="downloadButton">↓</div>
-            <div class="downloadText">Download All</div>
-          </div>
+    <div class="appwindow">
+      <div class="topBar">
+        <div class="snapboothText">SnapBooth</div>
+        <div class="download" id="downloadAll">
+          <div class="downloadButton">↓</div>
+          <div class="downloadText">Download All</div>
         </div>
-        <div class="appBody">
-          <div class="videoPanel" id="videoPanel">
-            <video id="webcam" autoplay playsinline></video>
-            <div class="promptOverlay" id="promptOverlay">
-            <!-- <div class="camera">
-                <div class="innerCamera">
-                  <div class="innerCameracircle">
-                    <div class="innerCircle2"></div>
-                  </div>
-                </div>
-              </div>
-              <h3>Grant Camera Access</h3>
-              <p>Click Allow Camera to let your browser use your camera.</p>
-              <div class="allowButton">Allow Camera</div> --> 
-            </div>
-            <div class="liveBox">
-              <div class="liveDot"></div>
-              <div class="liveText">Live</div>
-            </div>
-            <div class="photosBox">4 photos</div>
-            <div class="cameraButton">
-              <div class="circle">
-                <div class="innerCircle"></div>
-              </div>
-            </div>
-            <div class="livePreview">Live preview</div>
+      </div>
+      <div class="appBody">
+        <div class="videoPanel" id="videoPanel">
+          <video id="webcam" autoplay playsinline></video>
+          <div class="promptOverlay" id="promptOverlay">
+            <h3>Grant Camera Access</h3>
+            <p>Click Allow Camera to let your browser use your camera.</p>
+            <div class="allowButton" id="allowBtn">Allow Camera</div>
           </div>
-          <div class="snapSection">
-            <div class="shutterButton">
-              <div class="innerRing"></div>
-            </div>
-            <div class="snapText">Snap</div>
+          <div class="liveBox" id="liveBox">
+            <div class="liveDot"></div>
+            <div class="liveText">Live</div>
           </div>
-          <div class="thumbnailStrip">
-            <div class="singleThumbnail">
-              <div class="thumbNumber">#1</div>
-            </div>
-            <div class="singleThumbnail">
-              <div class="thumbNumber">#2</div>
-            </div>
-            <div class="singleThumbnail">
-              <div class="thumbNumber">#3</div>
-            </div>
-            <div class="singleThumbnail">
-              <div class="thumbNumber">#4</div>
-            </div>
-            <div class="singleThumbnail">
-              <div class="thumbNumber">#5</div>
-            </div>
-            <div class="singleThumbnail">
-              <div class="thumbNumber">#6</div>
-            </div>
-            <div class="singleThumbnail">
-              <div class="thumbNumber">#7</div>
-            </div>
-            <div class="singleThumbnail">
-              <div class="thumbNumber">#8</div>
-            </div>
-            <div class="singleThumbnail2"></div>
+          <div class="photosBox" id="photosBox">0 photos</div>
+        </div>
+        <div class="snapSection">
+          <div class="shutterButton" id="shutterBtn">
+            <div class="innerRing"></div>
           </div>
+          <div class="snapText">Snap</div>
+        </div>
+        <div class="thumbnailStrip" id="thumbStrip">
+          <div class="singleThumbnail2"></div>
         </div>
       </div>
     </div>
