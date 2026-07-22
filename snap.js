@@ -1,4 +1,5 @@
-console.log("snap.js loaded");
+/*Bunch of DOM elements 
+DOM(Document Object Model) гэдэг нь HTML дээрх "tag"-ийг авч мод хэлбэртэй бүтэц болгон задалдаг Javаscript-ийн объект */
 const video = document.getElementById("webcam");
 const allowBtn = document.getElementById("allowBtn");
 console.log(allowBtn);
@@ -9,16 +10,20 @@ const strip = document.getElementById("thumbStrip");
 const photos = document.getElementById("photosBox");
 const download = document.getElementById("downloadAll");
 
-let images = [];
-
-// Camera
+let images = []; /* Авсан зурагнууд array-д хадгалагдана*/
+/* Камер ашиглах зөвшөөрөл авах товчлуур*/
 allowBtn.onclick = async () => {
-  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-  video.srcObject = stream;
-  video.style.display = "block";
-  overlay.style.display = "none";
-  live.style.display = "flex";
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true }); /*browser өөрийн зөвшөөрлийн цонхыг харуулна.*/
+    video.srcObject = stream; /*камерыг HTML <video> tag2тай холбоно*/
+    video.style.display = "block"; /*css дээр video-г display none болгон нуусань харин зөвшөөрөл авсан болохоор video-г харуулна*/
+    overlay.style.display = "none"; /*камер гарч ирэхээс өмнөх зөвшөөрлийн container-ийг нууна*/
+    live.style.display = "flex"; /*live box дотор байгаа элементүүдийг эгнүүлэн байрлуулна.*/
+  } catch (err) {
+    console.error(" No permission to use camera.", err); /*камерын зөвшөөрөл өгөөгүй тохиолдолд error заана*/
+  }
 };
+
 
 // Snap photo
 shutter.onclick = () => {
