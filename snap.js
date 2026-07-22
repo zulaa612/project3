@@ -13,23 +13,16 @@ const download = document.getElementById("downloadAll");
 let images = []; /* Авсан зурагнууд array-д хадгалагдана*/
 /* Камер ашиглах зөвшөөрөл авах товчлуур*/
 allowBtn.onclick = async () => {
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia({
-      video: true,
-    }); /*browser өөрийн зөвшөөрлийн цонхыг харуулна.*/
-    video.srcObject = stream; /*камерыг HTML <video> tag2тай холбоно*/
-    video.style.display =
-      "block"; /*css дээр video-г display none болгон нуусань харин зөвшөөрөл авсан болохоор video-г харуулна*/
-    overlay.style.display =
-      "none"; /*камер гарч ирэхээс өмнөх зөвшөөрлийн container-ийг нууна*/
-    live.style.display =
-      "flex"; /*live box дотор байгаа LIVE блокыг дэлгэцэд харуулна.*/
-  } catch (err) {
-    console.error(
-      " No permission to use camera.",
-      err,
-    ); /*камерын зөвшөөрөл өгөөгүй тохиолдолд error заана*/
-  }
+  const stream = await navigator.mediaDevices.getUserMedia({
+    video: true,
+  }); /*browser өөрийн зөвшөөрлийн цонхыг харуулна.*/
+  video.srcObject = stream; /*камерыг HTML <video> tag2тай холбоно*/
+  video.style.display =
+    "block"; /*css дээр video-г display none болгон нуусань харин зөвшөөрөл авсан болохоор video-г харуулна*/
+  overlay.style.display =
+    "none"; /*камер гарч ирэхээс өмнөх зөвшөөрлийн container-ийг нууна*/
+  live.style.display =
+    "flex"; /*live box дотор байгаа LIVE блокыг дэлгэцэд харуулна.*/
 };
 
 //Зураг авах товчлуур
@@ -72,8 +65,8 @@ download.onclick = () => {
   images.forEach((img, i) => {
     /*images array-д хадгалагдсан бүх зургууд*/
     const a = document.createElement("a"); /*харагдахгүй линк үүсгэх*/
-    a.href = img;/*линкийн зам*/
+    a.href = img; /*линкийн зам*/
     a.download = `photo${i + 1}.png`; /*file-ийг татаж авах*/
-    a.click(); 
+    a.click();
   });
 };
